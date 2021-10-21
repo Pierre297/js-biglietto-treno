@@ -17,7 +17,7 @@ const kilometres = parseInt(prompt("Quanti chilometri devi percorrere?"));
 console.log(kilometres);
 
 // calcola il prezzo del biglietto
-let ticketPrize = kilometres * (0,21);
+let ticketPrize = kilometres * (0.21);
 
 // sconti 
 if (userAge < 18){
@@ -27,11 +27,13 @@ if (userAge < 18){
     elemento.innerHTML = `Il prezzo del tuo biglietto è ${finMinDiscount}\u20AC`;
 } else if (userAge > 65) {
     let overDiscount = ticketPrize - (ticketPrize * 40 / 100);
-    console.log(overDiscount);
+    let finOverDiscount = overDiscount.toFixed(2)
+    console.log(finOverDiscount);
     elemento.innerHTML = `Il prezzo del tuo biglietto è ${overDiscount}\u20AC`;
 } else {
     console.log(ticketPrize);
-    elemento.innerHTML = `Il prezzo del tuo biglietto è ${ticketPrize}\u20AC`;
+    let normalPrize = ticketPrize.toFixed(2)
+    elemento.innerHTML = `Il prezzo del tuo biglietto è ${normalPrize}\u20AC`;
 }
 
 
