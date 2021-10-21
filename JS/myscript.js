@@ -6,6 +6,8 @@
 
 const elemento = document.getElementById("mio_id");
 
+
+
 // chiedi quanti anni ha il passeggero.
 const userAge = parseInt(prompt("Quanti anni hai?"));
 console.log(userAge);
@@ -21,14 +23,14 @@ let ticketPrize = kilometres * (0,21);
 if (userAge < 18){
     let minDiscount = ticketPrize - (ticketPrize * 20 / 100);
     console.log(minDiscount);
-    elemento.innerHTML = `Il prezzo del tuo biglietto è ${minDiscount}`
+    elemento.innerHTML = `Il prezzo del tuo biglietto è ${minDiscount}\u20AC`;
 } else if (userAge > 65) {
     let overDiscount = ticketPrize - (ticketPrize * 40 / 100);
     console.log(overDiscount);
-    elemento.innerHTML = `Il prezzo del tuo biglietto è ${overDiscount}`
+    elemento.innerHTML = `Il prezzo del tuo biglietto è ${overDiscount}\u20AC`;
 } else {
     console.log(ticketPrize);
-    elemento.innerHTML = `Il prezzo del tuo biglietto è ${ticketPrize}`
+    elemento.innerHTML = `Il prezzo del tuo biglietto è ${ticketPrize}\u20AC`;
 }
 
 
