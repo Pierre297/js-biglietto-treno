@@ -22,8 +22,9 @@ let ticketPrize = kilometres * (0,21);
 // sconti 
 if (userAge < 18){
     let minDiscount = ticketPrize - (ticketPrize * 20 / 100);
+    let finMinDiscount = minDiscount.toFixed(2)
     console.log(minDiscount);
-    elemento.innerHTML = `Il prezzo del tuo biglietto è ${minDiscount}\u20AC`;
+    elemento.innerHTML = `Il prezzo del tuo biglietto è ${finMinDiscount}\u20AC`;
 } else if (userAge > 65) {
     let overDiscount = ticketPrize - (ticketPrize * 40 / 100);
     console.log(overDiscount);
